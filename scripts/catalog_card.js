@@ -33,13 +33,12 @@ async function getProducts() {
     try {
 
         if (!productsData.length) {
-            const res = await fetch('../data/product.json');
+            const res = await fetch('/data/product.json');
             if (!res.ok) {
                 throw new Error(res.statusText)
             }
             productsData = await res.json();
         }
-        console.log(productsData)
 
         if ((productsData.length > COUNT_SHOW_CARDS_CLICK) && 
             btnShowCards.classList.contains('none')) {
