@@ -75,7 +75,7 @@
 	"price": "500",
 	"discount": "10",
 	"img": "../images/popular_product_5.webp",
-	"descr": "Металлическая"
+	"descr": ""
 },
 {
 	"id": 11,
@@ -91,6 +91,6 @@
 	"price": "300",
 	"discount": "5",
 	"img": "../images/item_2.webp",
-	"descr": "Металлическая"
+	"descr": ""
 }
 ]

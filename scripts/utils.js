@@ -1,7 +1,7 @@
 "use strict"
 //==========================================
 
-// Вывод ошибки
+//Вывод ошибки
 export function showErrorMessage(message) {
     const h1 = document.querySelector('.wrapper h1')
     const msg = 
