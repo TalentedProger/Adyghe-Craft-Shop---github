@@ -1,0 +1,51 @@
+@use '../helpers/' as *;
+
+.product-type {
+	font-family: "Montserrat";
+	display: grid;
+	grid-template-columns: repeat(2,2fr);
+	gap: rem(30);
+	margin-bottom: rem(60);
+
+	&__item {
+		position: relative;
+		border-radius: rem(20);
+		transition: var(--transition_2);
+		&:hover {
+			transform: scale(102%);
+			box-shadow: rgba(0, 0, 0, 0.18) 6px 4px 16px 4px, rgba(0, 0, 0, 0.3) -6px -4px 16px 4px;}
+		&:hover > .product-type__image {
+			filter: brightness(70%);
+			transition: var(--transition_2);
+		}
+	}
+
+	&__image {
+		max-height: rem(350);
+		object-fit: cover;
+		border-radius: rem(20);
+		width: 100%;
+		&:hover,&:focus {
+			backdrop-filter: contrast(50%);
+		}
+	}
+
+	&__title {
+		position: absolute;
+		color: white;
+		backdrop-filter: blur(40px);
+		font-weight: 600;
+		font-family: inherit;
+		text-align: center;
+		width: 100%;
+		bottom: 0;
+		border-radius: rem(0) rem(0) rem(20) rem(20);
+		font-size: rem(20);
+		padding-block: rem(5);
+
+		@include mobile {
+			font-size: rem(16);
+			padding-block: rem(2);
+		}
+	}
+}

@@ -1,0 +1,83 @@
+@use '../helpers/' as *;
+.footer {
+	color: rgba(255,255,255,0.7);
+	background-color: rgba(0,0,0,0.7);
+	font-family: "Montserrat";
+	justify-content: space-between;
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		font-weight: 300;
+		text-wrap: nowrap;
+
+		@media (max-width:380px) {
+			text-wrap: wrap;
+		}
+	}
+	// &__item {
+	// }
+
+	&_link {
+		transition: all 0.25s ease-in-out;
+		&:hover {
+			color: var(--color-yellow);
+			font-weight: 500;
+		}
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		padding-block: rem(60);
+		gap: rem(40);
+
+		@include tablet {
+			grid-template-columns: repeat(2,2fr);
+			gap: rem(20);
+		}
+		@include mobile {
+			grid-template-columns: repeat(1,4fr);
+		}
+	}
+	&__soc1als {
+		display: flex;
+		gap: rem(30);
+		margin-top: rem(20);
+	}
+}
+
+.footer__item-title {
+	position: relative;
+	font-size: rem(18);
+	font-weight: 500;
+	color: white;
+	letter-spacing: rem(1);
+	margin-bottom: rem(10);
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		height: rem(1);
+		background-color: rgba(211,211,211,0.7);
+		width: 80%;
+
+		@include mobile-s {
+			width: 100%;
+		}
+
+	}
+}
+.center-footer__item-2 {
+	&::after {
+		width: 100%;
+		@include mobile {
+			width: 80%;
+		}
+		@include mobile-s {
+			width: 100%;
+		}
+	}
+}

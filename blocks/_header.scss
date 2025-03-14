@@ -1,0 +1,231 @@
+@use '../helpers/' as *;
+
+.header {
+	position: sticky;
+	z-index: 100;
+	top: 0;
+	color: var(--color-yellow);
+	font-size: rem(18);
+	font-family: 'Montserrat';
+	padding-block: rem(20);
+	background-color: wheat;
+	animation-name: scrolling-header;
+	animation-fill-mode: both;
+	animation-timeline: scroll();
+	animation-range: rem(100) rem(200);
+	@keyframes scrolling-header {
+		to {
+			box-shadow: 0 0 1rem 0 wheat;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__overlay {
+		@include mobile-above {
+			display: contents;
+		}
+
+		@include mobile {
+			&:not(.is-active) {
+				@include hide;
+				translate: 100%;
+			}
+			display: flex;
+			flex-direction: column;
+			gap: rem(20);
+			position: fixed;
+			inset: 0;
+			transition: var(--transition);
+			background-color: var(--color-green);
+			align-items: center;
+			padding: rem(20);
+		}
+	}
+	&__navigation {
+		display: flex;
+		font-weight: 700;
+		color: black;
+		gap: rem(30);
+		@include tablet {
+			font-size: rem(16);
+			gap: rem(10);
+		}
+		@include mobile {
+			display: flex;
+			flex-direction: column;
+			overflow-y: auto;
+			gap: rem(16);
+			font-size: rem(20);
+			color: var(--color-yellow);
+			padding-block: rem(50) rem(20);
+
+			@include mobile {
+				gap: rem(20);
+			}
+		}
+		&-item {
+			position: relative;
+			transition: var(--transition);
+
+			@include mobile {
+				margin-bottom: rem(0);
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: rem(2);
+				background-color: var(--color-blue);
+				bottom: rem(-2);
+				transition: var(--transition);
+				top: 100%;
+				opacity: 0;
+				
+				@include mobile {
+					width: 100%;
+					bottom: rem(-5);
+					height: rem(2);
+					background-color: white;
+				}
+			}
+			&:hover::before {
+				width: 100%;
+				color: var(--color-yellow);
+				bottom: 0%;
+				opacity: 1;
+				@include mobile {
+					width: 100%;
+					background-color:rgba(255,255,255,0.5);
+				}
+			}
+			&:hover {
+				backdrop-filter: blur(20px);
+				color: var(--color-blue);
+				@include mobile {
+					color: rgba(255,255,255,0.7);
+				}
+			}
+		}
+	}
+	&__logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: rem(0);
+		transition: var(--transition_2);
+		text-wrap: nowrap;
+		&:hover {
+			opacity: 0.7;
+		}
+		&-text {
+			position: relative;
+			font-size: rem(20);
+			font-family: "Merriweather", serif;
+			font-weight: 700;
+			color: var(--color-green);
+			@include tablet {
+				font-size: rem(18);
+			}
+		}
+		&-img {
+			width: rem(50);
+			aspect-ratio: 1;
+
+			@include tablet {
+				width: rem(40);
+			}
+
+		}
+	}
+	&__btns {
+		display: flex;
+		gap: rem(20);
+
+
+		@include tablet {
+			gap: rem(10);
+		}
+		@include mobile {
+			gap: rem(20);
+		}
+
+		&-item {
+			display: inline-flex;
+			position: relative;
+			width: rem(35);
+			aspect-ratio: 1;
+			transition: all 0.15s ease-in;
+			@include tablet {
+				width: rem(30);
+			}
+			@include mobile {
+				width: rem(35);
+			}
+			&:hover {
+				@include mobile {
+					&:hover {
+						box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+					}
+				}
+
+			}
+			&--language {
+				&:after {
+					background: url('./images/language-svgrepo-com.svg');
+					background-repeat: no-repeat;
+
+					@include mobile {
+						background: url('./images/language_white.svg');
+					}
+			}
+				&:hover {
+					box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+					@include mobile {
+						border: none;
+					}
+				}
+			}
+			&:after {
+				position: absolute;
+				content: '';
+				width: rem(25);
+				aspect-ratio: 1;
+				background-repeat: no-repeat;
+				background-size: contain;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+
+				@include tablet {
+					width: rem(20);
+				}
+				@include mobile {
+					width: rem(25);
+				}
+			}
+		}
+	}
+	&__burger-button {
+		display: inline-flex;
+		background: url('./images/HamburgerMenu.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: rem(40);
+		aspect-ratio: 1;
+		z-index: 1;
+
+		&.is-active {
+			display: inline-flex;
+			background: url('./images/CloseLg.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(40);
+			aspect-ratio: 1;
+			z-index: 1;
+		}
+	}
+}

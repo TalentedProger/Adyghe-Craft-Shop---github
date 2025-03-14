@@ -1,0 +1,139 @@
+@use '../helpers/' as *;
+
+html {
+	&.is-lock {
+		overflow: hidden;
+	}
+}
+.container {
+	max-width: 1470px;
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+}
+
+body {
+	font-family: "Poppins";
+	background-color: var(--color-blue);
+	// background-color: var(--color-yellow);
+	// background-color: wheat;
+	// background-color: #000000;
+	// background-color: #1b4f72;
+	a {
+		color: inherit;
+	}
+}
+.btn {
+	transition: 0.15s ease-out;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+.btn_less {
+	transition: 0.15s ease-out;
+	&:hover {
+		transform: scale(0.9);
+	}
+}
+.see_all_link {
+	transition: all 0.2s ease-out;
+	&:hover {
+		color:rgba(211,211,211,0.7);
+		text-shadow: #000000 1px 0 10px;
+	}
+}
+.visible-mobile {
+	@include mobile-above {
+		display: none !important;
+	}
+}
+
+.header__icon-link {
+	display: inline-block;
+	cursor: pointer;
+	transition: var(--transition);
+	width: rem(30);
+	height: rem(30);
+}
+.header__icon {
+	display: block;
+	margin: 0 auto;
+	width: rem(30);
+	aspect-ratio: 1;
+	fill: #000000;
+
+	@include tablet {
+		width: rem(20);
+		transform: translate(0,20%);
+	}
+
+	@include mobile {
+		width: rem(35);
+		transform: translate(0,0);
+		fill: white;
+	}
+}
+
+.header__icon-link:hover .header__icon {
+	transition: var(--transition);
+	fill: var(--color-blue);
+
+	@include mobile {
+		fill: var(--color-yellow);
+		transition: var(--transition_2);
+	}
+}
+.hero-section__image {
+	width: rem(200);
+}
+
+.footer__icon-link {
+	display: inline-block;
+	cursor: pointer;
+	transition: var(--transition);
+	width: rem(25);
+	height: rem(25);
+}
+.footer__icon {
+	display: block;
+	margin: 0 auto;
+	width: rem(25);
+	aspect-ratio: 1;
+	fill: #FFFFFF;
+}
+.footer__icon-link:hover .footer__icon {
+	transition: var(--transition);
+	fill: var(--color-yellow);
+}
+
+.header__dropdown-language {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-language__content {
+	display: none;
+	position: absolute;
+	backdrop-filter: blur(20px);
+	background-color: rgba(255,255,255,0.9);
+	background-color: transparent;
+	right: 0;
+	z-index: 1;
+	border-radius: rem(5);
+	padding: rem(5);
+}
+.dropdown-language__item {
+	padding: rem(5);
+	display: block;
+	background-color: black;
+	border-radius: rem(5);
+	margin-bottom: 5px;
+	font-size: rem(14);
+	font-weight: 700;
+	transition: var(--transition);
+	&:hover {
+		background-color: white;
+	}
+}
+.header__dropdown-language:hover .dropdown-language__content {
+	display: block;
+}

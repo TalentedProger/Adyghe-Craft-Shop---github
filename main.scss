@@ -1,0 +1,16 @@
+@use './styles/normalize';
+@use './styles/fonts';
+@use './styles/variables';
+@use './styles/globals';
+@use './styles/swiper';
+@use './styles/swiper_2';
+
+
+@use './blocks/header';
+@use './blocks/main-hero';
+@use './blocks/popular-product';
+@use './blocks/our-advanteges';
+@use './blocks/product-types';
+@use './blocks/footer';
+@use './blocks/main-catalog';
+@use './blocks/basket';

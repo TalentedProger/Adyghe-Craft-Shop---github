@@ -1,0 +1,96 @@
+[
+	{
+			"id": 1,
+			"title": "Значок",
+			"price": "300",
+			"discount": "5",
+			"img": "../images/item_1.webp",
+			"descr": "Металлическая"
+	},
+	{
+			"id": 2,
+			"title": "Футболка",
+			"price": "1000",
+			"discount": "0",
+			"img": "../images/item_9.webp",
+			"descr": "С двух сторон"
+	},
+	{
+		"id": 3,
+		"title": "3D стикеры",
+		"price": "300",
+		"discount": "15",
+		"img": "../images/item_3.webp",
+		"descr": "Металлическая"
+},
+{
+	"id": 4,
+	"title": "Флаг большой",
+	"price": "1250",
+	"discount": "10",
+	"img": "../images/item_4.webp",
+	"descr": "Металлическая"
+},
+{
+	"id": 5,
+	"title": "Бейсболка",
+	"price": "800",
+	"discount": "15",
+	"img": "../images/item_5.webp",
+	"descr": "Металлическая"
+},{
+	"id": 6,
+	"title": "Шеврон",
+	"price": "250",
+	"discount": "10",
+	"img": "../images/item_6.webp",
+	"descr": "Металлическая"
+},
+{
+	"id": 7,
+	"title": "Чехол",
+	"price": "600",
+	"discount": "25",
+	"img": "../images/item_7.webp",
+	"descr": "Металлическая"
+},
+{
+	"id": 8,
+	"title": "Брелок",
+	"price": "300",
+	"discount": "5",
+	"img": "../images/3.webp",
+	"descr": "Металлическая"
+},
+{
+	"id": 9,
+	"title": "3D Стикер",
+	"price": "150",
+	"discount": "5",
+	"img": "../images/popular_product_3.webp",
+	"descr": "Металлическая"
+},{
+	"id": 10,
+	"title": "Чехол IPhone 13 Pro",
+	"price": "500",
+	"discount": "10",
+	"img": "../images/popular_product_5.webp",
+	"descr": "Металлическая"
+},
+{
+	"id": 11,
+	"title": "Брелок флаг",
+	"price": "300",
+	"discount": "5",
+	"img": "../images/3.webp",
+	"descr": "Металлическая"
+},
+{
+	"id": 12,
+	"title": "Брелок кинжалы",
+	"price": "300",
+	"discount": "5",
+	"img": "../images/item_2.webp",
+	"descr": "Металлическая"
+}
+]

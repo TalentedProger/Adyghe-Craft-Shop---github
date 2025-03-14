@@ -1,0 +1,11 @@
+@use '../helpers/' as *;
+.hero-section {
+	// max-width: rem(1200);
+	background-color: white;
+	background-color: black;
+	// background-color: var(--color-yellow);
+	border-top: 1px solid black;
+	&__image {
+		min-width: 100%;
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "adyghe-craft-shop",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Salim Sokurov",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch" : "sass --watch ."
+  },
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}

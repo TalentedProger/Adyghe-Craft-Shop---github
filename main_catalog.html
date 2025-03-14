@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<script src="./scripts/catalog_card.js" type="module" defer></script>
+	<script src="./scripts/main.js" type="module"></script>
+	<title>Adyghe Craft Shop | Каталог</title>
+</head>
+<body>
+	<header class="header" data-js-header>
+		<div class="header__wrapper container">
+			<div class="header__logo">
+				<img src="./images/Adygea-Flag-12 (1).svg"
+				alt="Adyghe Flat" class="header__logo-img">
+				<a href="#" class="header__logo-text">Adyghe Craft Shop</a>
+			</div>
+			<div class="header__overlay" data-js-header-overlay>
+				<nav class="header__navigation">
+					<a href="./index.html" target="_blank" class="header__navigation-item">Главная</a>
+					<a href="./main_catalog.html" target="_blank" class="header__navigation-item">Каталог</a>
+					<a href="#" target="_blank" class="header__navigation-item">Доставка и оплата</a>
+					<a href="#" target="_blank" class="header__navigation-item">О нас</a>
+				</nav>
+				<div class="header__btns">
+					<a href="#" class="button header__icon-link hidden" title="Корзина">
+						<svg class="header__icon" viewBox="0 0 20 22" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2.08416 2.7512C2.22155 2.36044 2.6497 2.15503 3.04047 2.29242L3.34187 2.39838C3.95839 2.61511 4.48203 2.79919 4.89411 3.00139C5.33474 3.21759 5.71309 3.48393 5.99677 3.89979C6.27875 4.31243 6.39517 4.76515 6.4489 5.26153C6.47295 5.48373 6.48564 5.72967 6.49233 6H17.1305C18.8155 6 20.3323 6 20.7762 6.57708C21.2202 7.15417 21.0466 8.02369 20.6995 9.76275L20.1997 12.1875C19.8846 13.7164 19.727 14.4808 19.1753 14.9304C18.6236 15.38 17.8431 15.38 16.2821 15.38H10.9792C8.19028 15.38 6.79583 15.38 5.92943 14.4662C5.06302 13.5523 4.99979 12.5816 4.99979 9.64L4.99979 7.03832C4.99979 6.29837 4.99877 5.80316 4.95761 5.42295C4.91828 5.0596 4.84858 4.87818 4.75832 4.74609C4.67026 4.61723 4.53659 4.4968 4.23336 4.34802C3.91052 4.18961 3.47177 4.03406 2.80416 3.79934L2.54295 3.7075C2.15218 3.57012 1.94678 3.14197 2.08416 2.7512Z"></path> <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"></path> <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"></path></g></svg>
+					</a>
+					<a href="#" class="button header__icon-link" title="Мы на карте">
+						<svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22"><path d="M12 2C7.589 2 4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12c0-4.411-3.589-8-8-8m0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4s4 1.79 4 4s-1.79 4-4 4"/></svg>
+					</a>
+					<div class="header__dropdown-language dropdown-language">
+						<button class="button header__btns-item header__btns-item--language" aria-label="Сменить язык" title="Сменить язык"></button>
+						<div class="dropdown-language__content">
+							<a href="#" class="dropdown-language__item">Адыгабзэ</a>
+							<a href="#" class="dropdown-language__item">English</a>
+							<a href="#" class="dropdown-language__item">Türkçe</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="header__burger-button visible-mobile" title="открыть меню" aria-label="открыть меню" data-js-header-button></button>
+		</div>
+	</header>
+	<div class="main-wrapper container">
+		<div class="main-catalog">
+			<h1 class="main-catalog__title">Товары нашего магазина</h1>
+			<div class="cards"></div>
+			<div class="show-card_wrapper"><button class="show-cards none">Показать еще</button></div>
+			
+			<div class="main-catalog__btns">
+				<a href="./basket.html" class="basket-btn_link">
+						<div class="basket__inner">
+							<svg class="main-catalog__btn" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56"><path fill="currentColor" d="M.953 6.719c0 .96.797 1.781 1.735 1.781h7.921l3.75 25.734c.493 3.328 2.25 5.414 5.649 5.414H47.36c.913 0 1.71-.75 1.71-1.757c0-1.008-.797-1.758-1.71-1.758H20.406c-1.336 0-2.156-.938-2.367-2.367l-.375-2.461h29.742c3.422 0 5.18-2.11 5.672-5.461l1.875-12.399a7.2 7.2 0 0 0 .094-.89c0-1.125-.844-1.899-2.133-1.899h-38.25l-.469-2.976c-.234-1.805-.89-2.72-3.28-2.72H2.687c-.937 0-1.734.822-1.734 1.76M18.04 47.242c0 2.133 1.688 3.797 3.82 3.797a3.766 3.766 0 0 0 3.797-3.797a3.781 3.781 0 0 0-3.797-3.797c-2.132 0-3.82 1.688-3.82 3.797m21.914 0c0 2.133 1.711 3.797 3.82 3.797c2.133 0 3.82-1.664 3.82-3.797c0-2.11-1.687-3.797-3.82-3.797c-2.109 0-3.82 1.688-3.82 3.797"/></svg>
+								<span class="basket__count">0</span>
+						</div>
+				</a>
+				<a class="home-btn_link" href="/">
+						<svg class="main-catalog__btn" width="45" height="45" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.98 1.984l7 6h-2.003v6H9.96V10.97H5.997v3.016H2.982v-6H.979l7-6z" fill="currentColor"></path>
+						</svg>
+				</a>
+			</div>
+	</div>
+	</div>
+</body>
+</html>

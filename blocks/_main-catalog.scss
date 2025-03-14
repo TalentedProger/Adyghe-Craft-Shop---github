@@ -1,0 +1,239 @@
+@use '../helpers/' as *;
+
+.hidden {
+	display: none;
+}
+.main-wrapper {
+	color: white;
+	font-family: var(--font);
+	font-size: rem(16);
+	padding-block: rem(100);
+}
+.main-catalog {
+	position: relative;
+}
+.main-catalog__title {
+	font-size: fluid(29,20);
+	font-weight: 700;
+
+	@include mobile {
+		width: 75%;
+	}
+}
+
+.show-cards {
+	background: var(--color-green);
+	font-size: rem(18);
+	font-weight: 600;
+	padding: rem(8) rem(14);
+	border-radius: rem(10);
+	color: var(--color-yellow);
+	border: rem(1) solid var(--color-yellow);
+	background: black;
+}
+
+.main-catalog__btns {
+	display: flex;
+	position: absolute;
+	right: 0;
+	top: 0;
+	gap: rem(30);
+}
+.main-catalog__btn {
+	width: rem(30);
+	aspect-ratio: 1;
+}
+.basket__inner {
+	position: relative;
+}
+.basket__count {
+	position: absolute;
+	border-radius: 50%;
+	top: 0;
+	right: 0;
+	background: black;
+	text-align: center;
+	align-items: center;
+	height: rem(20);
+	aspect-ratio: 1;
+	transform: translate(30%,-30%);
+	font-size: rem(14);
+	color:var(--color-yellow);
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	width: 100%;
+	justify-content: center;
+	justify-items: center; 
+	column-gap: rem(20);
+	row-gap: rem(50); 
+	margin: 60px auto;
+	color: white;
+
+	@include tablet {
+		grid-template-columns: repeat(2,2fr);
+	}
+
+	@include mobile-s {
+		grid-template-columns: repeat(1,4fr);
+	}
+}
+
+.card {
+	color: white;
+	max-width: rem(300);
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	border-radius: rem(10);
+	transition: 0.2s;
+	position: relative;
+	padding-inline: rem(20);
+	padding-block: rem(10);
+	font-size: rem(16);
+	backdrop-filter: blur(60px);
+
+	@include mobile-s {
+		max-width: none;
+		background: rgba(0, 0, 0, 0.3);
+		padding: rem(40);
+		border-radius: rem(30);
+	}
+}
+
+.card:hover {
+}
+
+.card__top {
+}
+
+.card__image {
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.card__image > img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+transition: 0.8s;
+}
+
+// .card__image:hover > img {
+// transform: scale(105%);
+// }
+
+.card__label {
+	padding: 4px 8px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: var(--color-green);
+	border-radius: 4px;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.card__bottom {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: rem(10);
+}
+
+.card__prices {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.card__price::after {
+	content: "₽";
+	position: absolute;
+	font-size: smaller;
+	right: rem(-12);
+	transform: translate(-0%,15%);
+}
+
+.card__price--discount {
+	font-weight: 500;
+	font-size: rem(16);
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: rem(20);
+}
+
+.card__price--discount::before {
+	content: "Цена со скидкой";
+	font-weight: 500;
+}
+
+.card__price--common {
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+	color: rgba(255,255,255,0.8);
+	font-weight: 300;
+}
+
+.card__price--common::before {
+	content: "Цена:";
+	margin-bottom: rem(10);
+}
+
+.card__title {
+	font-weight: 500;
+	font-size: rem(18);
+	line-height: 150%;
+	margin-bottom: rem(10);
+}
+
+.card__title:hover {
+	color: var(--color-yellow);
+}
+
+.card__add {
+	width: 100%;
+	text-align: center;
+	cursor: pointer; 
+	background-color: var(--color-yellow);
+	color: black;
+	font-weight: 600;
+	border-radius: rem(10);
+	padding-block: rem(5);
+	transition: var(--transition_2);
+}
+
+.card__add:hover, .card__add.active {
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+}
+
+.show-cards{
+	padding: rem(10) rem(20);
+	margin-bottom: rem(20);
+	color: var(--color-yellow);
+	background-color: var(--color-yellow);
+	border: rem(2) solid var(--color-yellow);
+	border-radius: rem(15);
+	font-size: rem(16);
+	font-weight: 600;
+	transition: var(--transition);
+	background-color: black;
+}
+
+.show-cards:hover {
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 13px 24px, rgba(0, 0, 0, 0.22) 0px 10px 8px;
+}
+
+.show-card_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,30 @@
+@use '../helpers/' as *;
+
+.swiper_2 {
+	overflow: hidden !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.swiper-wrapper {
+	display: flex !important;
+	justify-content: space-between !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.swiper-slide_2{
+	@media (max-width:400px) {
+	}
+}
+.swiper-slide_2 > img {
+	min-width: 100%;
+	height: fluid(400,250);
+	object-fit: cover;
+	border-radius: rem(20);
+
+	@include mobile-s {
+		height: auto;
+	}
+}
+.swiper-pagination_2 {
+	padding-top: rem(30);
+}

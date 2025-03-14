@@ -1,0 +1,33 @@
+@use '../helpers/' as *;
+
+.popular-product {
+	font-family: 'Montserrat';
+	margin-block: rem(50);
+	&__header {
+		margin-bottom: rem(40);
+		display: flex;
+		justify-content: space-between;
+		gap: rem(10);
+	}
+	&__title {
+		font-size: fluid(36,20);
+		font-weight: 700;
+		color: white;
+	}
+	&__image {
+		width: rem(260);
+		height: rem(320);
+		box-shadow: rgba(0, 0, 0, 0.65) 10px 13px 27px -5px, rgba(0, 0, 0, 0.4) 10px 8px 16px -8px;
+		border-radius: rem(20);
+		object-fit: cover;
+	}
+	&__link {
+		font-size: fluid(20,14);
+		padding:  fluid(10,5) fluid(15,10);
+		background-color: white;
+		color: var(--color-green);
+		border-radius: rem(10);
+		font-weight: 600;
+		text-align: center;
+	}
+}
